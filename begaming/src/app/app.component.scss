@@ -1,0 +1,54 @@
+
+.imgLogo-nombreLogo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.btn-menu{
+    color:white;
+    font-size: 15px;
+    margin: 20px;
+
+}
+.logo-img{
+    width: 125px;
+}
+
+.menu {
+    border-bottom: 4px solid white;
+    width: 100%;
+    display: flex;
+    background-color: black; 
+}
+.logo-img{
+    width: 200px;
+}
+.logo{
+    font-size: 17px;
+}
+.btn-menu {
+   display: none;
+}
+ul.navegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 18px;
+    
+}
+
+ul.navegacion li {
+    list-style: none;
+    margin: 0px 0px;
+    padding: 15px 20px;
+    font-family: 'Arial Narrow Bold';
+}
+
+ul.navegacion  li a {
+    text-decoration: none;
+    color: white;
+}
+
+ul.navegacion li:hover {
+    background-color: gray;
+}
