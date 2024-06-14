@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HardwareListComponent {
 
+    harware={
+      "nombre": "Amd 5 3600",
+      "tipo": "Procesador",
+      "precio": 300000,
+      "stock": 10,
+      "image": "assets/img/procesador53600.jpeg"
+    }
+    constructor(){
+      
+    }
+    ngOnInit():void{
+
+    }
+
 }
