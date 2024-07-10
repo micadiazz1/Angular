@@ -15,6 +15,8 @@ export class InputIntegerComponent {
 
   @Output() quantityChange: EventEmitter<number> = new EventEmitter<number>();
 
+  @Output()
+
   upQuantity():void{
     if(this.quantity < this.max){
       this.quantity++;

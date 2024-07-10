@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Hardware } from './Hardware';
 import { HardwareCartService } from '../hardware-cart.service';
+import { HardwareDataService } from '../hardware-data.service';
 
 @Component({
   selector: 'app-hardware-list',
@@ -9,40 +10,15 @@ import { HardwareCartService } from '../hardware-cart.service';
 })
 export class HardwareListComponent   {
 
-    hardwares : Hardware[] = [
-      {
-        nombre: "Amd 5 3600",
-        tipo: "Procesador",
-        precio: 300000,
-        stock: 10,
-        image: "assets/img/procesador53600.jpeg",
-        quantity:0
-      },
-      {
-      nombre: "Amd 10 3600",
-      tipo: "Procesador",
-      precio: 400000,
-      stock: 4,
-      image: "assets/img/procesador53600.jpeg",
-      quantity:0
-      },
-      {
-        nombre: "Amd 2 3600",
-        tipo: "Procesador",
-        precio: 3022200,
-        stock: 0,
-        image: "assets/img/procesador53600.jpeg",
-        quantity:0
-      },
-    ];
+    hardwares : Hardware[] = [];
 
    
 
-    constructor(private cart: HardwareCartService){
+    constructor(private cart: HardwareCartService,private hardwareDataService:HardwareDataService){
       
     }
     ngOnInit():void{
-
+      this.hardwareDataService.getAll().subscribe(hardwares=>this.hardwares = hardwares);
     }
     
     addToCart(hardware:Hardware):void{

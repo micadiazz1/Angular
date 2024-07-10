@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HardwareListComponent } from './hardware-list/hardware-list.component';
@@ -10,6 +10,7 @@ import { BegamingAboutComponent } from './begaming-about/begaming-about.componen
 import { BegamingHardwareComponent } from './begaming-hardware/begaming-hardware.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 import { BegamingCartComponent } from './begaming-cart/begaming-cart.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BegamingCartComponent } from './begaming-cart/begaming-cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
