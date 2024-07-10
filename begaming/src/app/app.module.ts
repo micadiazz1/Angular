@@ -6,16 +6,19 @@ import { AppComponent } from './app.component';
 import { HardwareListComponent } from './hardware-list/hardware-list.component';
 import { FormsModule } from '@angular/forms';
 import { BegamingAboutComponent } from './begaming-about/begaming-about.component';
-import { BegamingCardComponent } from './begaming-card/begaming-card.component';
+
 import { BegamingHardwareComponent } from './begaming-hardware/begaming-hardware.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
+import { BegamingCartComponent } from './begaming-cart/begaming-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HardwareListComponent,
     BegamingAboutComponent,
-    BegamingCardComponent,
-    BegamingHardwareComponent
+    BegamingHardwareComponent,
+    InputIntegerComponent,
+    BegamingCartComponent
   ],
   imports: [
     BrowserModule,

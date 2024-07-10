@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BegamingCardComponent } from './begaming-card.component';
+import { InputIntegerComponent } from './input-integer.component';
 
-describe('BegamingCardComponent', () => {
-  let component: BegamingCardComponent;
-  let fixture: ComponentFixture<BegamingCardComponent>;
+describe('InputIntegerComponent', () => {
+  let component: InputIntegerComponent;
+  let fixture: ComponentFixture<InputIntegerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [BegamingCardComponent]
+      declarations: [InputIntegerComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BegamingCardComponent);
+    fixture = TestBed.createComponent(InputIntegerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

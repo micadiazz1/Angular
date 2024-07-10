@@ -1,0 +1,7 @@
+
+<ul class="list-group">
+    <li class="list-group-item list-group-item-success">Carrito de compras</li>
+    @for (item of cartList; track item) {
+    <li class="list-group-item">{{item.nombre}}: {{item.quantity}}<li>
+    }
+</ul>

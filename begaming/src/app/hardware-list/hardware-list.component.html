@@ -6,22 +6,25 @@
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Cantidad</th>
             <th>Compra</th>
         </tr>
     </thead>
     <tbody>
-        @for (item of harware; track item.nombre) {
+        @for (hardware of hardwares; track hardware.nombre) {
             <tr>
-                <td><img width="120" [src]="item.image" [alt]="item.nombre" /></td>
-                <td>{{item.nombre}}</td>
-                <td>{{item.tipo}}</td>
-                <td>{{item.precio}}</td>
-            @if(item.stock>0){
+                <td><img width="120" [src]="hardware.image" [alt]="hardware.nombre" /></td>
+                <td>{{hardware.nombre}}</td>
+                <td>{{hardware.tipo}}</td>
+                <td>{{hardware.precio}}</td>
+            @if(hardware.stock>0){
                 <td></td>
                 <td>
-                    <button (click)="downQuantity(item)">-</button>
-                    <input type="number" [(ngModel)]="item.quantity">
-                    <button (click)="upQuantity(item)">+</button>
+                   <app-input-integer [(quantity)]="hardware.quantity" [max]="hardware.stock" ></app-input-integer>
+                  
+                </td>
+                <td>                
+                    <button class="btn btn btn-outline-success" (click)="addToCart(hardware)">Comprar</button>
                 </td>
             }@else {
                 <td >SIN STOCK</td>

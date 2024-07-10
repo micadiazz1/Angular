@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Hardware } from './Hardware';
+import { HardwareCartService } from '../hardware-cart.service';
 
 @Component({
   selector: 'app-hardware-list',
@@ -8,7 +9,7 @@ import { Hardware } from './Hardware';
 })
 export class HardwareListComponent   {
 
-    harware : Hardware[] = [
+    hardwares : Hardware[] = [
       {
         nombre: "Amd 5 3600",
         tipo: "Procesador",
@@ -34,23 +35,23 @@ export class HardwareListComponent   {
         quantity:0
       },
     ];
-    constructor(){
+
+   
+
+    constructor(private cart: HardwareCartService){
       
     }
     ngOnInit():void{
 
     }
-    upQuantity(hardware:Hardware):void{
-      if(hardware.quantity < hardware.stock){
-        hardware.quantity++;
-      }
-    }
-    downQuantity(hardware:Hardware):void{
-      if(hardware.quantity>0){
-        hardware.quantity--;
-      }
+    
+    addToCart(hardware:Hardware):void{
+      this.cart.addToCart(hardware);
+      hardware.stock-=hardware.quantity;
+      hardware.quantity=0;
       
     }
+  
 
 
 }
